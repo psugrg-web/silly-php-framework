@@ -4,7 +4,7 @@ return [
     'database' => [
         'host' => 'mysql',
         'port' => '3306',
-        'dbname' => 'shopping_list',
+        'dbname' => 'u356087_shopping_list',
         'charset' => 'utf8mb4'
     ],
 ];
