@@ -1,0 +1,17 @@
+{
+    "name": "p/shopping-list",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Przemysław Sulecki",
+            "email": "psugrg@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Core\\": "Core/",
+            "Http\\": "Http/"
+        }
+    }
+}
