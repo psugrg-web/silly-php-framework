@@ -6,12 +6,10 @@
 <form method="POST" action="/list">
     <!-- Name is important here since it's used to automatically generate a POST request -->
     <label for="product">Product</label>
-    <div>
-        <textarea id="product" name="product" required><?= $_POST['product'] ?? '' ?></textarea>
-        <?php if (isset($errors['product'])) : ?>
-            <p><?= $errors['product'] ?></p>
-        <?php endif; ?>
-    </div>
+    <textarea id="product" name="product" required><?= $_POST['product'] ?? '' ?></textarea>
+    <?php if (isset($errors['product'])) : ?>
+        <p><?= $errors['product'] ?></p>
+    <?php endif; ?>
     <p>
         <button type="submit">Add</button>
     </p>

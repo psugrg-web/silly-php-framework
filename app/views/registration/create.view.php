@@ -4,25 +4,16 @@
 <h1> Register here! </h1>
 
 <form action="/register" method="post">
-    <div>
-        <label for="email">Email address</label>
-        <input id="email" name="email" type="email" autocomplete="email" required placeholder="Email address">
+    <input id="email" name="email" type="email" autocomplete="email" required placeholder="Email address">
+    <input id="password" name="password" type="password" autocomplete="current-password" required placeholder="Password">
+    <button type="submit">Submit</button>
 
-        <?php if (isset($errors['email'])) : ?>
-            <p><?= $errors['email'] ?></p>
-        <?php endif; ?>
-    </div>
-    <div>
-        <label for="password">Password</label>
-        <input id="password" name="password" type="password" autocomplete="current-password" required placeholder="Password">
-
-        <?php if (isset($errors['password'])) : ?>
-            <p><?= $errors['password'] ?></p>
-        <?php endif; ?>
-    </div>
-    <div>
-        <button type="submit">Submit</button>
-    </div>
+    <?php if (isset($errors['email'])) : ?>
+        <p><?= $errors['email'] ?></p>
+    <?php endif; ?>
+    <?php if (isset($errors['password'])) : ?>
+        <p><?= $errors['password'] ?></p>
+    <?php endif; ?>
 </form>
 
 <?php require base_path('views/partials/foot.php') ?>

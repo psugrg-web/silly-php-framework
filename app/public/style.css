@@ -1,18 +1,23 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
 
 :root {
-    --bg-color-main: #202124;
-    --bg-color-alt: #2f3135;
-    --text-color-header: #edf0f1;
-    --text-color-content: #edf0f1;
+    --bg-color: #202124;
+    --bg-color-highlight: #2a2c30;
+    --bg-color-alt: #edf0f1;
+    --text-color: #edf0f1;
 }
 
 * {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+}
+
+body {
     box-sizing: border-box;
     overflow: hidden;
     margin: 0;
     padding: 0;
-    background-color: var(--bg-color-main);
+    background-color: var(--bg-color);
 }
 
 header {
@@ -22,114 +27,76 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 2ch 1ch;
+    color: var(--text-color);
 }
 
-@media (max-width: 700px) {
-    header {
-        flex-wrap: wrap;
-    }
-
-    header nav {
-        order: 3;
-        padding-top: 1ch;
-        margin: auto;
-    }
-
-    header .session {
-        order: 2;
-    }
-}
-
-li,
 a,
-h3,
-button,
-.button {
-    font-family: "Montserrat", sans-serif;
-    font-weight: 200;
-    font-size: large;
-    color: var(--text-color-header);
-    text-decoration: none;
+button {
+    font-size: 1rem;
+    color: var(--text-color);
+    background-color: var(--bg-color);
 }
 
-.content {
-    font-family: "Montserrat", sans-serif;
-    font-weight: 200;
-    color: var(--text-color-header);
-
-    max-width: 50rem;
+div {
+    color: var(--text-color);
+    max-width: 80ch;
     margin: auto;
     padding: 1ch;
 }
 
-.logo {
-    cursor: pointer;
-}
-
-.nav_links {
-    list-style: none;
-}
-
-.nav_links li {
+nav * {
     display: inline-block;
-    padding: 0 1ch;
-    align-content: center;
 }
 
-.nav_links li a:hover {
+nav li {
+    list-style: none;
+    padding: 0 1ch;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+nav ul a:hover {
     text-decoration: underline;
 }
 
-.session form,
-a {
-    display: inline-block;
-    align-content: center;
-}
-
-.session {
-    display: flex;
-}
-
-.session h3 {
-    display: inline-block;
-    padding: 0 1ch;
-    align-content: center;
-}
-
 button,
-.button {
+nav>a {
     padding: 0.6ch 1.2ch;
-    margin: 0.5vh;
+    margin-top: 0.5ch;
+    margin-bottom: 0.5ch;
     border-style: solid;
     border-width: 1px;
-    border-color: var(--text-color-header);
+    border-color: var(--text-color);
     border-radius: 2ch;
     cursor: pointer;
     transition: all 0.3s ease 0s;
 }
 
 button:hover,
-.button:hover {
-    background-color: var(--text-color-header);
-    color: var(--bg-color-main);
+nav>a:hover {
+    background-color: var(--text-color);
+    color: var(--bg-color);
     transition: all 0.3s ease 0s;
+}
+
+input,
+textarea {
+    padding-top: 0.8vh;
+    padding-bottom: 0.8vh;
+    border-radius: 4px;
+    background-color: var(--bg-color-alt);
 }
 
 textarea {
     width: 100%;
-    height: 5vw;
-    padding: 12px 20px;
-    border: 2px solid var(--text-color-content);
-    border-radius: 4px;
-    background-color: var(--bg-color-main);
-    font-family: "Montserrat", sans-serif;
-    font-weight: 200;
-    font-size: large;
-    resize: none;
-    color: var(--text-color-content);
+    resize: vertical;
+    min-height: 3rem;
 }
 
-textarea:focus {
+textarea:focus,
+input:focus {
     outline: none;
 }
 
@@ -145,7 +112,7 @@ td {
 tr:hover td,
 tr:hover a,
 tr:hover form {
-    background-color: var(--bg-color-alt);
+    background-color: var(--bg-color-highlight);
 }
 
 td form {

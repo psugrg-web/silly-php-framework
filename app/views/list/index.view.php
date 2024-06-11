@@ -22,7 +22,9 @@
     <?php endforeach; ?>
 </table>
 
-<a class="button" href="/list/create">Add product</a>
+<nav>
+    <a href="/list/create">Add product</a>
+</nav>
 
 
 <?php require base_path('views/partials/foot.php') ?>
