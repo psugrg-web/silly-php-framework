@@ -8,7 +8,7 @@
     <label for="product">Product</label>
     <textarea id="product" name="product" required><?= $_POST['product'] ?? '' ?></textarea>
     <?php if (isset($errors['product'])) : ?>
-        <p><?= $errors['product'] ?></p>
+        <b><?= $errors['product'] ?></b>
     <?php endif; ?>
     <nav>
         <button type="submit">Add</button>

@@ -5,6 +5,7 @@
     --bg-color-highlight: #2a2c30;
     --bg-color-alt: #edf0f1;
     --text-color: #edf0f1;
+    --text-color-red: #e91010;
 }
 
 * {
@@ -65,7 +66,16 @@ nav ul a:hover {
     text-decoration: underline;
 }
 
-button,
+button:not(nav button) {
+    padding-left: 0;
+    padding-right: 0;
+    border-style: none;
+    cursor: pointer;
+    background: none;
+    text-decoration: underline;
+}
+
+nav button,
 nav>a {
     padding: 0.6ch 1.2ch;
     margin-top: 0.5ch;
@@ -78,7 +88,7 @@ nav>a {
     transition: all 0.3s ease 0s;
 }
 
-button:hover,
+nav button:hover,
 nav>a:hover {
     background-color: var(--text-color);
     color: var(--bg-color);
@@ -123,4 +133,9 @@ tr:hover td,
 tr:hover a,
 tr:hover form {
     background-color: var(--bg-color-highlight);
+}
+
+form b {
+    color: var(--text-color-red);
+    font-weight: bold;
 }

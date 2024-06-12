@@ -11,12 +11,12 @@
     <div>
         <textarea id="product" name="product" required><?= $product['product'] ?></textarea>
         <?php if (isset($errors['product'])) : ?>
-            <p><?= $errors['product'] ?></p>
+            <b><?= $errors['product'] ?></b>
         <?php endif; ?>
     </div>
     <nav>
-        <button type="submit">Update</button>
         <a href="/list">Cancel</a>
+        <button type="submit">Update</button>
     </nav>
 </form>
 
