@@ -15,7 +15,9 @@
                 <form method="POST">
                     <input type="hidden" name="_method" value="DELETE">
                     <input type="hidden" name="id" value="<?= $product["id"] ?>">
-                    <button>Delete</button>
+                    <nav>
+                        <button>Delete</button>
+                    </nav>
                 </form>
             </td>
         </tr>

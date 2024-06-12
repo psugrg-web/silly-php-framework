@@ -14,10 +14,10 @@
             <p><?= $errors['product'] ?></p>
         <?php endif; ?>
     </div>
-    <p>
+    <nav>
         <button type="submit">Update</button>
-    </p>
-    <a href="/list">go back...</a>
+        <a href="/list">Cancel</a>
+    </nav>
 </form>
 
 <?php require base_path('views/partials/foot.php') ?>

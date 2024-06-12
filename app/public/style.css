@@ -44,6 +44,10 @@ div {
     padding: 1ch;
 }
 
+nav {
+    text-align: right;
+}
+
 nav * {
     display: inline-block;
 }
@@ -106,18 +110,17 @@ input:focus {
 table {
     width: 100%;
     border-collapse: collapse;
+    margin-top: 0.5vh;
+    margin-bottom: 0.5vh;
 }
 
-td {
-    padding: 0.3vh 1vw;
+td,
+th {
+    border-bottom: 1px solid var(--text-color);
 }
 
 tr:hover td,
 tr:hover a,
 tr:hover form {
     background-color: var(--bg-color-highlight);
-}
-
-td form {
-    text-align: right;
 }

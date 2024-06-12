@@ -10,9 +10,9 @@
     <?php if (isset($errors['product'])) : ?>
         <p><?= $errors['product'] ?></p>
     <?php endif; ?>
-    <p>
+    <nav>
         <button type="submit">Add</button>
-    </p>
+    </nav>
 </form>
 
 <?php require base_path('views/partials/foot.php') ?>
