@@ -8,12 +8,10 @@
     <input type="hidden" name="id" value="<?= $product['id'] ?>">
     <!-- Name is important here since it's used to automatically generate a POST request -->
     <label for="product">Product</label>
-    <div>
-        <textarea id="product" name="product" required><?= $product['product'] ?></textarea>
-        <?php if (isset($errors['product'])) : ?>
-            <b><?= $errors['product'] ?></b>
-        <?php endif; ?>
-    </div>
+    <textarea id="product" name="product" required><?= $product['product'] ?></textarea>
+    <?php if (isset($errors['product'])) : ?>
+        <b><?= $errors['product'] ?></b>
+    <?php endif; ?>
     <nav>
         <a href="/list">Cancel</a>
         <button type="submit">Update</button>
