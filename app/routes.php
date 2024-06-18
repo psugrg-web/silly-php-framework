@@ -3,6 +3,8 @@
 $router->get('/', 'index.php');
 $router->get('/about', 'about.php');
 
+$router->post('/mail', 'email/send.php');
+
 $router->get('/list', 'list/index.php')->only('auth');
 $router->post('/list', 'list/store.php')->only('auth');
 $router->delete('/list', 'list/destroy.php')->only('auth');
