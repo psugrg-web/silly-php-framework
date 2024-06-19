@@ -3,7 +3,7 @@
     <nav>
         <ul>
             <li><a href="/">Home</a></li>
-            <li><a href="/about">About</a></li>
+            <li><a href="/contact">Contact us</a></li>
             <?php if ($_SESSION['user'] ?? false) : ?>
                 <li><a href="/list">Shopping List</a></li>
             <?php endif; ?>

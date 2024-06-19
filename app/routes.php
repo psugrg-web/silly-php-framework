@@ -1,7 +1,7 @@
 <?php
 
 $router->get('/', 'index.php');
-$router->get('/about', 'about.php');
+$router->get('/contact', 'contact.php');
 
 $router->post('/mail', 'email/send.php');
 

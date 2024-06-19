@@ -45,4 +45,4 @@ try {
     ]);
 }
 
-redirect('/');
+redirect('/contact');
