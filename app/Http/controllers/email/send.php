@@ -7,7 +7,7 @@ $message = $_POST["message"];
 
 
 use PHPMailer\PHPMailer\PHPMailer;
-// use PHPMailer\PHPMailer\SMTP;
+use Core\MailException;
 
 $email = new PHPMailer(true);
 
@@ -35,10 +35,14 @@ try {
 
     $email->send();
 } catch (Exception $e) {
-    echo "Message could not be sent. Mailer Error: {$email->ErrorInfo}";
+    MailException::throw([
+        "email" => "Message could not be sent. Cause: {$email->ErrorInfo}"
+    ], [
+        "name" => $name,
+        "email_addr" => $email_addr,
+        "subject" => $subject,
+        "message" => $message,
+    ]);
 }
 
-echo "message sent!";
-
-
-// redirect('/');
+redirect('/');

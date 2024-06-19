@@ -2,6 +2,7 @@
 
 use Core\Session;
 use Core\ValidationException;
+use Core\MailException;
 
 const BASE_PATH = __DIR__ . '/../';
 
@@ -23,6 +24,11 @@ $method = $_POST['_method'] ?? $_SERVER['REQUEST_METHOD'];
 try {
     $router->route($uri, $method);
 } catch (ValidationException $exception) {
+    Session::flash('errors', $exception->errors);
+    Session::flash('old', $exception->old);
+
+    redirect($router->previousUrl());
+} catch (MailException $exception) {
     Session::flash('errors', $exception->errors);
     Session::flash('old', $exception->old);
 
