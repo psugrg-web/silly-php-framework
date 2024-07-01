@@ -7,6 +7,7 @@
     <title>Shopping List</title>
     <link rel="stylesheet" href="/style.css">
     <link rel="icon" type="svg" href="list-black.svg">
+    <script src="nav.js" defer></script>
 </head>
 
 <body>

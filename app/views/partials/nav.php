@@ -1,6 +1,7 @@
 <header>
     <img src="/list-white.svg" alt="logo">
-    <nav>
+    <button class="primary-nav-toggle"></button>
+    <nav class="primary-nav" data-visible="false">
         <ul>
             <li><a href="/">Home</a></li>
             <li><a href="/contact">Contact us</a></li>
@@ -8,10 +9,8 @@
                 <li><a href="/list">Shopping List</a></li>
             <?php endif; ?>
         </ul>
-    </nav>
-    <nav>
         <?php if ($_SESSION['user'] ?? false) : ?>
-            <h3><?= $_SESSION['user']['email'] ?? '' ?></h3>
+            <span><?= $_SESSION['user']['email'] ?? '' ?></span>
             <form action="/session" method="POST">
                 <input type="hidden" name="_method" value="DELETE" />
                 <button>Log Out</button>
@@ -22,4 +21,4 @@
         <?php endif; ?>
     </nav>
 </header>
-<div class="content">
+<div>
