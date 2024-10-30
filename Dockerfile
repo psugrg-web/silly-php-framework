@@ -56,6 +56,6 @@ RUN mkdir -p /home/${username}/.composer && \
     chown -R ${username}:${username} /home/${username}
 USER ${username}
 
-# Create a link to the project
+# Set current path to the project folder
 ENV USER_APP_PATH=/home/${username}/project
 WORKDIR ${USER_APP_PATH}
